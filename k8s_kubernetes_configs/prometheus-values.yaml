@@ -1,0 +1,15 @@
+# Example Helm values for kube-prometheus-stack
+prometheus:
+  prometheusSpec:
+    retention: "10d"
+    serviceMonitorSelectorNilUsesHelmValues: false
+
+kubeStateMetrics:
+  enabled: true
+
+nodeExporter:
+  enabled: true
+
+grafana:
+  enabled: true
+  adminPassword: "changeme"
